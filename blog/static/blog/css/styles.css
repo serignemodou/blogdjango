@@ -1,0 +1,41 @@
+article {
+    background-color: #fff;
+    border: 1px solid #c5c5c5;
+    margin-bottom: 2em;
+    padding: 1em;
+    box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.3)
+}
+
+
+/*hover c'est lorqu'on fait passer la souris*/
+
+article:hover {
+    box-shadow: 1px 2px 12px rgba(0, 0, 0, 0.3)
+}
+
+article .title {
+    display: inline-block;
+    color: #1ce;
+    margin-bottom: 0.5em;
+}
+
+article .time {
+    font-style: italic;
+    color: #c5c5c5;
+}
+
+article .content {
+    padding: 0.5em 0;
+}
+
+
+/*text-decoration: nono enleve le souligne */
+
+article .content a {
+    text-decoration: none;
+    color: #1ce;
+}
+
+article .content a:hover {
+    text-decoration: underline;
+}

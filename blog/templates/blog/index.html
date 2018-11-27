@@ -1,0 +1,20 @@
+ {% extends 'blog/base.html' %} {% block title %}Blog{% endblock %} {% block body %}
+
+<h1> {{articles|length}} articles publiés</h1>
+<ul>
+    {% for list_article in articles %}
+    <article>
+        <h2 class="title">#{{list_article.id}}:{{ list_article.title|upper}}</h2>
+        <p class="time">
+            <time datetime="{{list_article.created_at|date:'Y-m-d'}}">
+                    ⏲️Publier il y'a:{{list_article.created_at|timesince }}       
+            </time>
+        </p>
+        <p class="content">{{list_article.body|truncatechars:19}}<a href="/blog/article/{{list_article.id}}">Lire la suite</a></p>
+
+    </article>
+    {% empty %}
+    <p>Désole pas d'articles publier</p>
+    {% endfor %}
+</ul>
+{% endblock %}
